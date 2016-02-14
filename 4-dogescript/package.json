@@ -1,0 +1,15 @@
+{
+  "name": "addition-dogescript",
+  "private": true,
+  "version": "1.0.0",
+  "description": "such addition much set so theory wow",
+  "author": "Halvard Skogsrud",
+  "license": "MIT",
+  "dependencies": {
+    "dogescript": "2.3.0"
+  },
+  "devDependencies": {
+    "require-doge": "0.1.6",
+    "tape": "4.4.0"
+  }
+}

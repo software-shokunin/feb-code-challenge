@@ -1,0 +1,1 @@
+gcc -m32 add.s main.c -o add && ./add $@

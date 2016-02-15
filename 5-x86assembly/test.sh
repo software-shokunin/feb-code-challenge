@@ -1,0 +1,1 @@
+gcc -m32 add.s test.c -o test && ./test

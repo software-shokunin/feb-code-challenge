@@ -1,0 +1,4 @@
+[root]
+name = "adder-rust"
+version = "0.1.0"
+

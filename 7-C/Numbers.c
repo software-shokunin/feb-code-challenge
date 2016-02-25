@@ -8,66 +8,43 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
-//#include <string.h>
 
-int getNumber();
+
 int sumNumbers(int,int);
 
 int main()
 {
-    int firstNumber = 0;
     int subsequentNumber = 0;
+    int numx = 0;
     static int runningTotal = 0;
     
-    printf("Here is a very ugly implementation of adding numbers without arithmitic. \n It works for positive and negative whole numbers. \n \n ");
+    printf("Here is a very ugly implementation of adding numbers without arithmitic. \nIt works for positive and negative whole numbers. \n \n ");
     
-    //Get the first number
-    firstNumber = getNumber();
-    printf("firstNumber =:%d\n", firstNumber);
-    //add the first two numbers
-    runningTotal = sumNumbers(firstNumber,runningTotal);
-    //get another number
-    //check for ending condition
-    
-    while((subsequentNumber = getNumber())!= 0)
+    printf("Please enter a number, hit return to continue, or any letter key to exit \n\n");
+    // get a number check for ending condition using returned value from scanf()
+    while((scanf("%d",&numx)==1))
     {
-            runningTotal = sumNumbers(runningTotal,subsequentNumber);
-            printf("The value of RunningTotal is : %d \n", runningTotal);
-            printf("The value of subsequentNumber is : %d \n", subsequentNumber);
+    
+        
+        //continue getting numbers until ending condition is true.
+        subsequentNumber = numx;
+        runningTotal = sumNumbers(runningTotal,subsequentNumber);
+        printf("You entered : %d \n", numx);
+        printf("The value of your running total is now :  %d.\n" ,runningTotal);
+        printf("Enter another number or any letter key to exit \n \n" );
     }
     
+    printf("That's not a whole number - exiting \n");
     printf("The sum of all your numbers is: %d \n", runningTotal);
-    
-}
-
-int getNumber()
-
-{
-    //Get a Number
-    int numx = 1;
-    printf("Please enter a number, or any other key to exit \n");
-    if (scanf("%d",&numx)!=1)
-    {
-        printf("That's not a number - exiting \n");
-        return 0;
-    }
-    else
-        return numx;
+    return 0;
     
 }
 
 
 int sumNumbers(int a, int b)
 {
-    
-    printf("call to sumnumbers");
-    printf("the value of a is = %d:\n", a);
-    printf("the value of b is = %d:\n", b);
     if (b == 0)return a;
     return sumNumbers(a ^ b, (a & b) << 1);
-    
-    
 }
 
 

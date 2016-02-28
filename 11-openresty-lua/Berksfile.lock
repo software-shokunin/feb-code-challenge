@@ -1,0 +1,33 @@
+DEPENDENCIES
+  nginx-calc
+    path: .
+    metadata: true
+
+GRAPH
+  apt (2.9.2)
+  build-essential (2.2.4)
+  chef_handler (1.2.0)
+  dmg (2.3.0)
+  git (4.3.7)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    windows (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  logrotate (1.9.2)
+  nginx-calc (0.1.0)
+    openresty (>= 0.0.0)
+  ohai (2.1.0)
+  openresty (0.3.5)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    git (>= 0.0.0)
+    jemalloc (>= 0.0.0)
+    logrotate (>= 0.0.0)
+    ohai (>= 1.1.4)
+    postgresql (>= 0.0.0)
+    yum (>= 0.0.0)
+  windows (1.39.1)
+    chef_handler (>= 0.0.0)
+  yum (3.10.0)
+  yum-epel (0.6.5)
+    yum (~> 3.2)
